@@ -38,4 +38,7 @@ import ZoneId from "ZoneId";
 // };
 
 const context = require.context('./data', true, /.*\.(ts|js|tsx)$/);
-Options.Triggers.concat(context.keys().map(context));
+context.keys().forEach((key) => {
+  const triggerFile = context(key);
+  Options.Triggers.push(triggerFile.default);
+});
