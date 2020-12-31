@@ -8,6 +8,7 @@ module.exports = {
     radar: './src/radar/index.ts',
     raidboss: './src/raidboss/index.ts'
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -18,6 +19,7 @@ module.exports = {
     ],
   },
   externals: {
+    Conditions: "Conditions",
     NetRegexes: "NetRegexes",
     Options: "Options",
     Regexes: "Regexes",
