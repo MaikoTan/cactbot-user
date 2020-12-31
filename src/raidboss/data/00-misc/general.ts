@@ -5,6 +5,13 @@ const triggerSet: TriggerFile = {
   zoneId: ZoneId.MatchAll,
   triggers: [
     {
+      id: 'Personal Death Report',
+      regex: NetRegexes.gameLog({ line: 'You are defeated by' }),
+      regexJa: NetRegexes.gameLog({ line: ':あなたは、.*に倒された。' }),
+      alarmText: '死',
+      durationSeconds: 5,
+    },
+    {
       id: 'General Ready Check',
       netRegex: NetRegexes.gameLog({ line: '(?:\\y{Name} has initiated|You have commenced) a ready check\..*?', capture: false }),
       netRegexDe: NetRegexes.gameLog({ line: '(?:\\y{Name} hat|Du hast) eine Bereitschaftsanfrage gestellt\..*?', capture: false }),
