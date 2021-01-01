@@ -1,7 +1,7 @@
 import Conditions from "Conditions";
 import NetRegexes from "NetRegexes";
 import ZoneId from "ZoneId";
-import { createDotDurationTrigger } from "src/util/index";
+import { createDotDurationTrigger } from "@/util";
 
 const triggerSet: TriggerFile = {
   zoneId: ZoneId.MatchAll,

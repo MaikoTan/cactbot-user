@@ -1,17 +1,19 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
     "outDir": "dist",
     "noImplicitAny": true,
+    "moduleResolution": "Node",
     "module": "es6",
     "target": "es5",
     "allowJs": true,
     "paths": {
-      "cactbot": ["cactbot.d.ts"],
-      "Conditions": ["../cactbot/resources/conditions.js"],
-      "ZoneId": ["../cactbot/resources/zone_id.js"],
-      "NetRegexes": ["../cactbot/resources/netregexes.js"],
-      "Regexes": ["../cactbot/resources/regexes.js"],
+      "@/*": ["./*"],
+      "cactbot": ["../cactbot.d.ts"],
+      "Conditions": ["../../cactbot/resources/conditions.js"],
+      "ZoneId": ["../../cactbot/resources/zone_id.js"],
+      "NetRegexes": ["../../cactbot/resources/netregexes.js"],
+      "Regexes": ["../../cactbot/resources/regexes.js"],
     }
   },
   "include": ["src"],
