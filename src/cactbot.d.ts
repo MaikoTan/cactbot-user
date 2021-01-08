@@ -37,6 +37,7 @@ interface Trigger {
   condition?: TriggerFunction<boolean>;
   preRun?: TriggerFunction<any>;
   promise?: TriggerFunction<Promise<any>>;
+  beforeSeconds?: number | TriggerFunction<number>;
   delaySeconds?: number | TriggerFunction<number>;
   durationSeconds?: number | TriggerFunction<number>;
   suppressSeconds?: number | TriggerFunction<number>;
@@ -54,6 +55,7 @@ interface TriggerFile {
   zoneId?: number;
   timelineFile?: string;
   timeline?: string;
+  timelineTriggers: Trigger[];
   locale?: keyof Locale;
   timelineReplace?: TimelineReplace[];
   triggers?: Trigger[];
