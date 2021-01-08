@@ -1,11 +1,8 @@
-interface Locale {
-  en?: string;
-  de?: string;
-  fr?: string;
-  ja?: string;
-  cn?: string;
-  ko?: string;
-}
+type Locale = "en" | "de" | "fr" | "ja" | "cn" | "ko";
+
+type LocaleObject = {
+  [s in Locale]: string;
+};
 
 type TriggerFunction<T> = (data: any, matches?: any/* RegExpMatchArray */, output?: any) => T;
 
@@ -14,7 +11,7 @@ interface Replacement {
 }
 
 interface TimelineReplace {
-  locale: keyof Locale;
+  locale: Locale;
   replaceText: Replacement;
   replaceSync: Replacement;
 }
@@ -43,20 +40,20 @@ interface Trigger {
   suppressSeconds?: number | TriggerFunction<number>;
   sound?: string;
   soundVolume?: number;
-  response?: Locale | TriggerFunction<Locale>;
-  alarmText?: string | Locale | TriggerFunction<Locale>;
-  alertText?: string | Locale | TriggerFunction<Locale>;
-  infoText?: string | Locale | TriggerFunction<Locale>;
-  tts?: string | Locale | TriggerFunction<Locale>;
+  response?: LocaleObject | TriggerFunction<LocaleObject>;
+  alarmText?: string | LocaleObject | TriggerFunction<LocaleObject>;
+  alertText?: string | LocaleObject | TriggerFunction<LocaleObject>;
+  infoText?: string | LocaleObject | TriggerFunction<LocaleObject>;
+  tts?: string | LocaleObject | TriggerFunction<LocaleObject>;
   run?: TriggerFunction<any>;
 }
 
-interface TriggerFile {
+interface TriggerSet {
   zoneId?: number;
   timelineFile?: string;
   timeline?: string;
-  timelineTriggers: Trigger[];
-  locale?: keyof Locale;
+  timelineTriggers?: Trigger[];
+  locale?: Locale;
   timelineReplace?: TimelineReplace[];
   triggers?: Trigger[];
   overrideTimelineFile?: boolean;
@@ -64,7 +61,7 @@ interface TriggerFile {
 }
 
 interface CactbotOptions {
-  Triggers: TriggerFile[];
+  Triggers: TriggerSet[];
 
   //#region raidboss options
   PlayerNicks: { [s: string]: string };

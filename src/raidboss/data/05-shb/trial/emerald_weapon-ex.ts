@@ -1,6 +1,6 @@
 import ZoneId from "ZoneId"
 
-const triggerSet: TriggerFile = {
+const triggerSet: TriggerSet = {
   zoneId: ZoneId.CastrumMarinumExtreme,
   timelineTriggers: [
     {

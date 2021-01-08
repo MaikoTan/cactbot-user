@@ -1,7 +1,7 @@
 import NetRegexes from "NetRegexes";
 import ZoneId from "ZoneId";
 
-const triggerSet: TriggerFile = {
+const triggerSet: TriggerSet = {
   zoneId: ZoneId.MatchAll,
   triggers: [
     {
