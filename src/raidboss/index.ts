@@ -36,6 +36,7 @@ Options.PlayerNicks = {
   "Nyanyako Nyako": "迷子",
   "Suzune Tsukuyomi": "月咏泠音",
   "Chiyo Mishima": "莉诺雅",
+  "Herschel Leisure": "哈谢尔",
 };
 
 const context = require.context('./data', true, /.*\.(ts|js|tsx)$/);
