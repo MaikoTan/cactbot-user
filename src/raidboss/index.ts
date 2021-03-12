@@ -1,7 +1,3 @@
-import NetRegexes from "NetRegexes";
-import Regexes from "Regexes";
-import ZoneId from "ZoneId";
-
 // Rename this file to `raidboss.js` and edit it to change the raidboss ui.
 // This file is Javascript.  Anything after "//" on a line is a comment.
 // If you edit this file, remember to reload ACT or click the "Reload overlay"
@@ -40,7 +36,7 @@ Options.PlayerNicks = {
   "Erato Mnemes": "エラト",
 };
 
-const context = require.context('./data', true, /.*\.(ts|js|tsx)$/);
+const context = require.context("./data", true, /.*\.(ts|js|tsx)$/);
 context.keys().forEach((key) => {
   const triggerFile = context(key);
   Options.Triggers.push(triggerFile.default);

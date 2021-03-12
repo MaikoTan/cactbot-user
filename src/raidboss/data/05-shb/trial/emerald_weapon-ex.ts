@@ -1,4 +1,4 @@
-import ZoneId from "ZoneId"
+import ZoneId from "ZoneId";
 
 const triggerSet: TriggerSet = {
   zoneId: ZoneId.CastrumMarinumExtreme,
