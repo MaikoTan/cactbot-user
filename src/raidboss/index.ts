@@ -33,10 +33,11 @@ import ZoneId from "ZoneId";
 // // A set of nicknames to use for players, when trying to shorten names.
 // // See: https://github.com/quisquous/cactbot/blob/main/docs/CactbotCustomization.md#customizing-behavior
 Options.PlayerNicks = {
-  "Nyanyako Nyako": "迷子",
-  "Suzune Tsukuyomi": "月咏泠音",
-  "Chiyo Mishima": "莉诺雅",
-  "Herschel Leisure": "哈谢尔",
+  "Nyanyako Nyako": "ニャコ",
+  "Suzune Tsukuyomi": "ツクヨミ",
+  "Chiyo Mishima": "リノア",
+  "Herschel Leisure": "ハーシェル",
+  "Erato Mnemes": "エラト",
 };
 
 const context = require.context('./data', true, /.*\.(ts|js|tsx)$/);
