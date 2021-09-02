@@ -1,17 +1,17 @@
-const path = require("path");
-const webpack = require("webpack");
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-  mode: "production",
+  mode: 'production',
   entry: {
-    jobs: "./src/jobs/index.ts",
-    oopsyraidsy: "./src/oopsyraidsy/index.ts",
-    radar: "./src/radar/index.ts",
-    raidboss: "./src/raidboss/index.ts",
+    jobs: './src/jobs/index.ts',
+    oopsyraidsy: './src/oopsyraidsy/index.ts',
+    radar: './src/radar/index.ts',
+    raidboss: './src/raidboss/index.ts',
   },
   output: {
-    filename: "[name].js",
-    path: path.resolve(__dirname, "dist"),
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -19,18 +19,18 @@ module.exports = {
         test: /\.(js|mjs|cjs|ts)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: [
               [
-                "@babel/preset-env",
+                '@babel/preset-env',
                 {
                   targets: {
-                    chrome: "75",
+                    chrome: '75',
                   },
                 },
               ],
-              ["@babel/preset-typescript"],
+              ['@babel/preset-typescript'],
             ],
           },
         },
@@ -42,7 +42,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new webpack.CleanPlugin(),
-  ],
+  plugins: [new webpack.CleanPlugin()],
 };

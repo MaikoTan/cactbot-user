@@ -22,8 +22,11 @@ Options.PullSound = '../../resources/sounds/freesound/sonar.ogg';
 // A set of nicknames to use for players, when trying to shorten names.
 // See: https://github.com/quisquous/cactbot/blob/main/docs/CactbotCustomization.md#customizing-behavior
 Options.PlayerNicks = {
-  'Captain Jimmy': 'Jimmy',
-  'Pipira Pira': 'Fish',
+  'Nyanyako Nyako': 'ニャコ',
+  'Suzune Tsukuyomi': 'ツクヨミ',
+  'Chiyo Mishima': 'リノア',
+  'Herschel Leisure': 'ハーシェル',
+  'Erato Mnemes': 'エラト',
 };
 
 // Add triggers in `data/` recursively.

@@ -23,10 +23,8 @@ const triggerSet: TriggerSet<RaidbossData> = {
       locale: 'de',
       missingTranslations: true,
       replaceSync: {
-        'You bid farewell to the striking dummy':
-          'Du winkst der Trainingspuppe zum Abschied zu',
-        'You bow courteously to the striking dummy':
-          'Du verbeugst dich hochachtungsvoll vor der Trainingspuppe',
+        'You bid farewell to the striking dummy': 'Du winkst der Trainingspuppe zum Abschied zu',
+        'You bow courteously to the striking dummy': 'Du verbeugst dich hochachtungsvoll vor der Trainingspuppe',
       },
       replaceText: {
         'If you see this': 'Wenn Sie dies sehen',
@@ -39,10 +37,8 @@ const triggerSet: TriggerSet<RaidbossData> = {
       locale: 'fr',
       missingTranslations: true,
       replaceSync: {
-        'You bid farewell to the striking dummy':
-          "Vous faites vos adieux au mannequin d'entraînement",
-        'You bow courteously to the striking dummy':
-          "Vous vous inclinez devant le mannequin d'entraînement",
+        'You bid farewell to the striking dummy': "Vous faites vos adieux au mannequin d'entraînement",
+        'You bow courteously to the striking dummy': "Vous vous inclinez devant le mannequin d'entraînement",
       },
       replaceText: {
         'If you see this': 'Si vous voyez ceci',
@@ -83,10 +79,8 @@ const triggerSet: TriggerSet<RaidbossData> = {
       locale: 'ko',
       missingTranslations: true,
       replaceSync: {
-        'You bid farewell to the striking dummy':
-          '.*나무인형에게 작별 인사를 합니다',
-        'You bow courteously to the striking dummy':
-          '.*나무인형에게 공손하게 인사합니다',
+        'You bid farewell to the striking dummy': '.*나무인형에게 작별 인사를 합니다',
+        'You bow courteously to the striking dummy': '.*나무인형에게 공손하게 인사합니다',
       },
       replaceText: {
         'If you see this': '이것을 보는 사람은',
