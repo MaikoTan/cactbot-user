@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
+/** @type {import("webpack").Configuration} */
 module.exports = {
   mode: 'production',
   entry: {
@@ -13,6 +14,14 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "cactbot"),
+      "cactbot": path.resolve(__dirname, "cactbot", "types"),
+    },
+    extensions: [".ts", ".js", ".json"],
+  },
+  externals: /^(cactbot)\/.*/,
   module: {
     rules: [
       {
